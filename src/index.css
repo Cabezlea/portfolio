@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* Styles for the main application container */
+.app-container {
+  padding-top: 50px; /* Adjust for the fixed navbar height */
+  width: 100%; /* Full width of the page */
+  margin: 0 auto; /* Center the content */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles for the scrolling wrapper */
+.wrapper {
+  scroll-behavior: smooth; /* Smooth scrolling */
+  position: relative; /* Allows positioning of child elements */
+  width: 100%; /* Full width of the wrapper */
+}
+
+/* Styles for individual sections (optional) */
+.section {
+  padding: 100px 20px; /* Padding around content */
+  min-height: 100vh; /* Full viewport height for each section */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
 }

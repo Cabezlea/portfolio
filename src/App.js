@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className="app-container"> {/* Main container for your application */}
+            <div className="app-container"> {/* Main container for application */}
                 <Navbar /> {/* Always visible navbar */}
                 <div className='wrapper' ref={wrapperRef}> {/* Container for scrolling */}
                     <div id="home" className='section'>
