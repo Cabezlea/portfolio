@@ -5,6 +5,7 @@ import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
+import ThreeDBackground from './Pages/ThreeDBackground';
 
 const App = () => {
     const wrapperRef = useRef(null);  // Use ref if you plan to add smooth scrolling logic later
@@ -12,6 +13,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="app-container"> {/* Main container for application */}
+                <ThreeDBackground /> {/* 3D background here */}
                 <Navbar /> {/* Always visible navbar */}
                 <div className='wrapper' ref={wrapperRef}> {/* Container for scrolling */}
                     <div id="home" className='section'>
