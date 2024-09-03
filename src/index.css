@@ -1,24 +1,156 @@
-
-/* Styles for the main application container */
-.app-container {
-  padding-top: 50px; /* Adjust for the fixed navbar height */
-  width: 100%; /* Full width of the page */
-  margin: 0 auto; /* Center the content */
+/* Ensure the body takes the full viewport height and has no margin */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: black; /* Ensure a dark background */
+  color: white;
 }
 
-/* Styles for the scrolling wrapper */
-.wrapper {
-  scroll-behavior: smooth; /* Smooth scrolling */
-  position: relative; /* Allows positioning of child elements */
-  width: 100%; /* Full width of the wrapper */
+/* Main application container */
+.app-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow-x: hidden;
+  position: relative; /* Allows positioning child elements absolutely */
 }
 
-/* Styles for individual sections (optional) */
+/* Canvas styling to cover entire screen */
+.canvas-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed; /* Make the canvas cover the entire viewport */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure it is behind other content */
+}
+
+/* Navbar styling similar to the reference website */
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 20px; /* Spacing between navbar items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6347; /* Hover color */
+}
+
+/* Section styling to ensure content is centered */
 .section {
-  padding: 100px 20px; /* Padding around content */
-  min-height: 100vh; /* Full viewport height for each section */
-  display: flex; /* Flexbox for centering content */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
+
+/* Loader animation */
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+/* Keyframe animation for loader */
+@keyframes mulShdSpin {
+  0%, 100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff,
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+    1.8em -1.8em 0 0em #ffffff,
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7),
+    2.5em 0em 0 0em #ffffff,
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.7),
+    1.75em 1.75em 0 0em #ffffff,
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7),
+    0em 2.5em 0 0em #ffffff,
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.7),
+    -1.8em 1.8em 0 0em #ffffff,
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7),
+    -2.6em 0em 0 0em #ffffff,
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+    2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.7),
+    -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+

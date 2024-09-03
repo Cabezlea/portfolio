@@ -12,8 +12,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className="app-container">
-                <ThreeDScene /> {/* 3D scene from GitHub repo using traditional Three.js */}
+                <ThreeDScene />
                 <Navbar />
                 <div className="wrapper" ref={wrapperRef}>
                     <div id="home" className="section">
@@ -29,7 +28,6 @@ const App = () => {
                         <Contact />
                     </div>
                 </div>
-            </div>
         </BrowserRouter>
     );
 };

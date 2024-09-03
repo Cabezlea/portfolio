@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import CanvasLoader from './Loader'; // Import the updated loader
 import spacemanModel from '../Images/Spaceman.glb';
-import blackHole from '../Images/black_hole.glb';
+import blackHole from '../Images/black_hole2.glb';
 
 const SpacemanModel = () => {
     const { scene } = useGLTF(spacemanModel);
