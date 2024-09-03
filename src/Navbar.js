@@ -5,10 +5,10 @@ import './Navbar.css';
 const Navbar = () => {
     return (
         <div className="navbar">
-            <a href="#home">Home</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+            <Link to="home" smooth={true} duration={500}>Home</Link>
+            <Link to="portfolio" smooth={true} duration={500}>Portfolio</Link>
+            <Link to="experience" smooth={true} duration={500}>Experience</Link>
+            <Link to="contact" smooth={true} duration={500}>Contact</Link>
         </div>
     );
 };

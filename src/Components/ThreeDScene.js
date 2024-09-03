@@ -10,15 +10,17 @@ const SpacemanModel = () => {
     return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
 };
 
-const BlackHole = () =>  {
+const BlackHole = () => {
     const { scene } = useGLTF(blackHole);
-    return <primitive object= {scene} scale={1.5} position={[0, -1, 0]} />;
+    return <primitive object={scene} scale={1.5} position={[0, -1, 0]} />;
 }
-
 
 const ThreeDScene = () => {
     return (
-        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+        <Canvas
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh' }}
+            camera={{ position: [0, 0, 5], fov: 75 }}
+        >
             <Suspense fallback={<CanvasLoader />}>
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} />
