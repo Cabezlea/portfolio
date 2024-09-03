@@ -5,27 +5,27 @@ import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
-import ThreeDBackground from './Pages/ThreeDBackground';
+import ThreeDScene from './Components/ThreeDScene.js'; // Corrected import path
 
 const App = () => {
-    const wrapperRef = useRef(null);  // Use ref if you plan to add smooth scrolling logic later
+    const wrapperRef = useRef(null);
 
     return (
         <BrowserRouter>
-            <div className="app-container"> {/* Main container for application */}
-                <ThreeDBackground /> {/* 3D background here */}
-                <Navbar /> {/* Always visible navbar */}
-                <div className='wrapper' ref={wrapperRef}> {/* Container for scrolling */}
-                    <div id="home" className='section'>
+            <div className="app-container">
+                <ThreeDScene /> {/* 3D scene from GitHub repo using traditional Three.js */}
+                <Navbar />
+                <div className="wrapper" ref={wrapperRef}>
+                    <div id="home" className="section">
                         <Home />
                     </div>
-                    <div id="portfolio" className='section'>
+                    <div id="portfolio" className="section">
                         <Portfolio />
                     </div>
-                    <div id="experience" className='section'>
+                    <div id="experience" className="section">
                         <Experience />
                     </div>
-                    <div id="contact" className='section'>
+                    <div id="contact" className="section">
                         <Contact />
                     </div>
                 </div>
@@ -33,5 +33,6 @@ const App = () => {
         </BrowserRouter>
     );
 };
+
 
 export default App;
