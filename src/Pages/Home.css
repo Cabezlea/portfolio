@@ -4,36 +4,41 @@
     background-repeat: no-repeat;
     min-height: 100vh; /* Ensure it takes full height */
     background-image: url('../Images/GargantuaCopy.jpeg'); /* Ensure correct path */
+    overflow: hidden;
 }
+
 
 #portfolio, #experience, #contact {
     min-height: 100vh; /* Full viewport height */
-    background-color: #0C2340; /* Example background color */
+    background-color: #0C2340;
 }
 
 .hero-content {
     position: absolute;
     top: 20%;
     left: 5%;
+    width: 90%;
     color: white;
     text-align: left;
     z-index: 1000;
 }
 
+/* Font sizes for responsive design */
 .hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 4rem;
+    font-size: 4vw; /* Responsive font size */
+    margin-bottom: 1rem; /* Adjusted spacing */
     font-weight: bold;
+    animation: text-glow 1.5s infinite alternate;
 }
 
 .hero-content .subtitle {
-    font-size: 2rem;
+    font-size: 2vw;
     margin-bottom: 0.5rem;
 }
 
 .hero-content .description {
-    font-size: 1.5rem;
-    margin-top: 20px;
+    font-size: 1.5vw;
+    margin-top: 1rem;
     max-width: 600px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8); /* Slight transparency */
@@ -44,7 +49,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Takes full width of its parent */
+    height: 100%; /* Takes full height of its parent */
     z-index: 1;
+}
+
+/* Animation for glowing effect */
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 10px white;
+    }
+    to {
+        text-shadow: 0 0 20px cyan;
+    }
 }
