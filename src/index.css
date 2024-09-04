@@ -20,33 +20,11 @@ body {
 /* Canvas styling to cover entire screen */
 .canvas-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed; /* Make the canvas cover the entire viewport */
   top: 0;
   left: 0;
   z-index: -1; /* Ensure it is behind other content */
-}
-
-/* Navbar styling similar to the reference website */
-.navbar {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-  display: flex;
-  gap: 20px; /* Spacing between navbar items */
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #ff6347; /* Hover color */
 }
 
 /* Section styling to ensure content is centered */
@@ -57,18 +35,6 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-}
-
-/* Loader animation */
-.canvas-loader {
-  font-size: 10px;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999em;
-  animation: mulShdSpin 1.1s infinite ease;
-  transform: translateZ(0);
 }
 
 /* Keyframe animation for loader */

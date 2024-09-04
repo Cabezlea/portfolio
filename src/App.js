@@ -1,36 +1,42 @@
 import React, { useRef } from 'react';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Home from './Pages/Home';
 import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
-import ThreeDScene from './Components/ThreeDScene.js'; // Corrected import path
+import ThreeDScene from './Components/ThreeDScene.js';
 
 const App = () => {
     const wrapperRef = useRef(null);
 
     return (
-        <BrowserRouter>
-                <ThreeDScene />
-                <Navbar />
-                <div className="wrapper" ref={wrapperRef}>
-                    <div id="home" className="section">
-                        <Home />
-                    </div>
-                    <div id="portfolio" className="section">
-                        <Portfolio />
-                    </div>
-                    <div id="experience" className="section">
-                        <Experience />
-                    </div>
-                    <div id="contact" className="section">
-                        <Contact />
-                    </div>
-                </div>
-        </BrowserRouter>
+        <Router>
+            <ThreeDScene />
+            <Navbar />
+            <div className="wrapper" ref={wrapperRef}>
+                {/* Home Section */}
+                <section id="home" className="section">
+                    <Home />
+                </section>
+
+                {/* Portfolio Section */}
+                <section id="portfolio" className="section">
+                    <Portfolio />
+                </section>
+
+                {/* Experience Section */}
+                <section id="experience" className="section">
+                    <Experience />
+                </section>
+
+                {/* Contact Section */}
+                <section id="contact" className="section">
+                    <Contact />
+                </section>
+            </div>
+        </Router>
     );
 };
-
 
 export default App;

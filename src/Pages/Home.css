@@ -1,0 +1,13 @@
+
+#home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure it takes full height */
+    background-image: url('../Images/GargantuaCopy.jpeg'); /* Ensure correct path */
+}
+
+#portfolio, #experience, #contact {
+    min-height: 100vh; /* Full viewport height */
+    background-color: #0C2340; /* Example background color */
+}
