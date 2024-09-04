@@ -24,7 +24,7 @@ const SpacemanModel = () => {
             object={scene}
             ref={spacemanRef}
             scale={[2.5, 2.5, 2.5]}  // Increased scale
-            position={[6, 0, 42]}  // Adjust position closer to the camera
+            position={[4, 0.5, 42]}  // Adjust position closer to the camera
             rotation={[Math.PI / 0.7, -2.5, 3 * Math.PI / 4]}  // Tilts the spaceman backward
         />
     );
