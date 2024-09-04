@@ -14,7 +14,7 @@ const SpacemanModel = () => {
     });
 
     useEffect(() => {
-        if (actions['Idle']) { // Replace 'Idle' with the actual animation name for bending pose if different
+        if (actions['Idle']) {
             actions['Idle'].reset().play();
         }
     }, [actions]);
@@ -24,8 +24,8 @@ const SpacemanModel = () => {
             object={scene}
             ref={spacemanRef}
             scale={[2.5, 2.5, 2.5]}  // Increased scale
-            position={[5, -2.3, 42]}  // Adjust position closer to the camera
-            rotation={[0, 3.15, 0]}   // Adjust rotation to face the camera
+            position={[6, 0, 42]}  // Adjust position closer to the camera
+            rotation={[Math.PI / 0.7, -2.5, 3 * Math.PI / 4]}  // Tilts the spaceman backward
         />
     );
 };
