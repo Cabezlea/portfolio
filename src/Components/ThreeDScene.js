@@ -1,19 +1,34 @@
 import React, { Suspense, useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF } from '@react-three/drei';
 import CanvasLoader from './Loader'; // Import the updated loader
 import spacemanModel from '../Images/Spaceman.glb';
 
 const SpacemanModel = () => {
     const spacemanRef = useRef();
-    const { scene } = useGLTF(spacemanModel);
+    const { scene, animations } = useGLTF(spacemanModel);
+    const { actions } = useAnimations(animations, spacemanRef);
+
+    useEffect(() => {
+        if (actions['PoseName']) {
+            actions['PoseName'].play();
+        }
+    }, [actions]);
 
     // Subtle rotation
     useFrame(() => {
         spacemanRef.current.rotation.y += 0.005;
     });
 
-    return <primitive object={scene} ref={spacemanRef} scale={[1.5, 1.5, 1.5]} position={[0, -0.5, 0]} />;
+    return (
+        <primitive
+            object={scene}
+            ref={spacemanRef}
+            scale={[2.5, 2.5, 2.5]}  // Increased scale
+            position={[5, -2.3, 42]}  // Adjust position closer to the camera
+            rotation={[0, 3.15, 0]}   // Adjust rotation to face the camera
+        />
+    );
 };
 
 
