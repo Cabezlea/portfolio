@@ -6,19 +6,18 @@ import spacemanModel from '../Images/Spaceman.glb';
 
 const SpacemanModel = () => {
     const spacemanRef = useRef();
-    const { scene, animations } = useGLTF(spacemanModel);
+    const { scene, animations } = useGLTF(spacemanModel, true); // The second parameter ensures the model and animations are draco-compressed if applicable.
     const { actions } = useAnimations(animations, spacemanRef);
 
+    useFrame(() => {
+        spacemanRef.current.rotation.y += 0.005; // Subtle rotation on the y-axis
+    });
+
     useEffect(() => {
-        if (actions['PoseName']) {
-            actions['PoseName'].play();
+        if (actions['Idle']) { // Replace 'Idle' with the actual animation name for bending pose if different
+            actions['Idle'].reset().play();
         }
     }, [actions]);
-
-    // Subtle rotation
-    useFrame(() => {
-        spacemanRef.current.rotation.y += 0.005;
-    });
 
     return (
         <primitive
