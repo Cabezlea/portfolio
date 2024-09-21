@@ -24,7 +24,7 @@ const SpacemanModel = () => {
             object={scene}
             ref={spacemanRef}
             scale={[2.5, 2.5, 2.5]}  // Increased scale
-            position={[4.5, 0.5, 42]}  // Adjust position closer to the camera
+            position={[4.5, 1, 42]}  // Adjust position closer to the camera
             rotation={[Math.PI / 0.7, -2.5, 3 * Math.PI / 4]}  // Tilts the spaceman backward
         />
     );
@@ -34,7 +34,7 @@ const SpacemanModel = () => {
 const ThreeDScene = () => {
     return (
         <Canvas
-            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh' }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100vh' }}
             camera={{ position: [0, 0, 50], fov: 75 }}
         >
             <Suspense fallback={<CanvasLoader />}>

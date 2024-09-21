@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import ThreeDScene from "../Components/ThreeDScene";
 
 const produceSpans = (text) => {
     return text.split("").map((char, index) => (
@@ -17,6 +18,7 @@ const Home = () => {
             <p className="description">
                 I love crafting captivating experiences for the digital world to savor.
             </p>
+            <ThreeDScene />
         </div>
     );
 };

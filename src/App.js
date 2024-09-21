@@ -5,14 +5,13 @@ import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
-import ThreeDScene from './Components/ThreeDScene.js';
+import ThreeDScene from "./Components/ThreeDScene";
 
 const App = () => {
     const wrapperRef = useRef(null);
 
     return (
         <Router>
-            <ThreeDScene />
             <Navbar />
             <div className="wrapper" ref={wrapperRef}>
                 {/* Home Section */}
