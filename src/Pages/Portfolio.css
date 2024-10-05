@@ -9,9 +9,9 @@
 }
 
 .portfolio-title {
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .projects-container {
@@ -45,7 +45,7 @@
 }
 
 .project-description {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #FFF;
     margin-top: 10px; /* Gives some space between the name and description */
 }
