@@ -5,14 +5,18 @@
     z-index: 10;
     display: flex;
     gap: 20px; /* Spacing between navbar items */
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     transition: color 0.3s;
+    font-size: 1.2rem;
+
 }
 
 .navbar a:hover {
