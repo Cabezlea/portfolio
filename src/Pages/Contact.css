@@ -11,9 +11,9 @@
 }
 
 .contact-header {
-    font-size: 3rem; /* Increase the font size */
+    font-size: 5rem; /* Increase the font size */
     color: white;
-    margin-bottom: 2rem; /* Add some space below the header */
+    margin-bottom: 5%; /* Add some space below the header */
     font-weight: bold; /* Make it bold */
     text-align: center;
 }
@@ -27,6 +27,8 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+
 }
 
 .contact-form input,

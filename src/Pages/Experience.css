@@ -10,14 +10,16 @@
 }
 
 .experience-title {
-    font-size: 2.5rem; /* Larger and bolder title */
+    font-size: 5rem; /* Larger and bolder title */
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 0; /* Reduced top margin */
+    margin-bottom: 5%; /* Space between title and cards */
 }
 
 .jobs-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center align and closer spacing */
+    gap: 30px; /* Space between job cards */
     width: 100%;
     cursor: pointer;
 }
@@ -26,32 +28,32 @@
     background: #222; /* Unified background color for consistency */
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 30%; /* Width adjustment if necessary */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s;
     text-align: center;
 }
 
 .job-card:hover {
-    background-color: #333;
+    background-color: #333; /* Hover effect */
 }
 
 .job-title, .job-company, .job-date {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Text size uniformity */
 }
 
 .job-description {
     background: #222; /* Same as job cards for uniformity */
-    margin-top: 20px;
+    margin-top: 20px; /* Distance from job cards */
     padding: 20px;
     border-radius: 10px;
-    width: 80%; /* Adjusted width */
+    width: 80%; /* Full width to match card arrangement */
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-
+    font-size: 1.5rem;
 }
 
 .job-detail {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #FFF;
     margin-bottom: 10px;
     list-style-type: disc; /* Adds bullet points */
