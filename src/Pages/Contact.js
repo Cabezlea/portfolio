@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
+
+import GitHubIcon from '../Images/Github.svg';
+
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -18,7 +21,7 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);  // This is where I might integrate an API for form submission
+        console.log(formData);
     };
 
     return (
@@ -36,6 +39,12 @@ const Contact = () => {
 
                 <button type="submit">Send</button>
             </form>
+            {/* GitHub icon in the bottom left corner */}
+            <div className="github-link">
+                <a href="https://github.com/Cabezlea?tab=overview&from=2024-10-01&to=2024-10-04" target="_blank" rel="noopener noreferrer">
+                    <img src={GitHubIcon} alt="GitHub" className="github-icon" />
+                </a>
+            </div>
         </div>
     );
 };

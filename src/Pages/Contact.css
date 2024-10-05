@@ -8,6 +8,7 @@
     background-color: #0C2340;
     padding: 40px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .contact-header {
@@ -54,6 +55,8 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 0.9rem;
+
 }
 
 .contact-form button:hover {
@@ -63,4 +66,20 @@
 .contact-form label {
     color: white;
     margin-bottom: 8px;
+}
+
+.github-link {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.github-icon {
+    width: 20%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.github-icon:hover {
+    opacity: 0.8;
 }
