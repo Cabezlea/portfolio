@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
-
-
 import GitHubIcon from '../Images/Github.svg';
+import MailIcon from '../Images/Mail.svg';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -39,10 +38,14 @@ const Contact = () => {
 
                 <button type="submit">Send</button>
             </form>
-            {/* GitHub icon in the bottom left corner */}
             <div className="github-link">
                 <a href="https://github.com/Cabezlea?tab=overview&from=2024-10-01&to=2024-10-04" target="_blank" rel="noopener noreferrer">
-                    <img src={GitHubIcon} alt="GitHub" className="github-icon" />
+                    <img src={GitHubIcon} alt="GitHub" className="icon" />
+                </a>
+            </div>
+            <div className="mail-link">
+                <a href="mailto:Leandro.cabezas@utdallas.edu">
+                    <img src={MailIcon} alt="Email" className="icon" />
                 </a>
             </div>
         </div>

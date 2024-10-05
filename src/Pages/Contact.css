@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     background-color: #0C2340;
-    padding: 40px;
+    padding: 2.5rem;
     box-sizing: border-box;
     position: relative;
 }
@@ -21,15 +21,15 @@
 
 .contact-form {
     width: 90%;
-    max-width: 600px;
+    max-width: 37.5rem;
     display: flex;
     flex-direction: column;
     background-color: #333;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     font-size: 1.5rem;
-
+    z-index: 2; /* Higher z-index to ensure it stays on top */
 }
 
 .contact-form input,
@@ -44,7 +44,7 @@
 }
 
 .contact-form textarea {
-    height: 150px; /* Make the textarea bigger */
+    height: 9.4rem; /* Make the textarea bigger */
 }
 
 .contact-form button {
@@ -56,7 +56,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 0.9rem;
-
 }
 
 .contact-form button:hover {
@@ -68,18 +67,25 @@
     margin-bottom: 8px;
 }
 
-.github-link {
+.github-link, .mail-link {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
+    bottom: 1.25rem; /* Adjust the positioning as necessary */
 }
 
-.github-icon {
-    width: 20%;
+.github-link {
+    left: 1.25rem; /* GitHub icon on the bottom left corner */
+}
+
+.mail-link {
+    right: 1.25rem; /* Mail icon on the bottom right corner */
+}
+
+.icon {
+    width: 9.3rem; /* Fixed width for consistency */
     height: auto;
     transition: opacity 0.3s ease;
 }
 
-.github-icon:hover {
+.icon:hover {
     opacity: 0.8;
 }
