@@ -1,0 +1,59 @@
+.experience-container {
+    color: #FFF;
+    background-color: #0C2340; /* Unified background color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience-title {
+    font-size: 2.5rem; /* Larger and bolder title */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.jobs-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    cursor: pointer;
+}
+
+.job-card {
+    background: #222; /* Unified background color for consistency */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.job-card:hover {
+    background-color: #333;
+}
+
+.job-title, .job-company, .job-date {
+    font-size: 1.2rem;
+}
+
+.job-description {
+    background: #222; /* Same as job cards for uniformity */
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjusted width */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+
+}
+
+.job-detail {
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-bottom: 10px;
+    list-style-type: disc; /* Adds bullet points */
+    margin-left: 20px; /* Proper alignment for bullet points */
+}
