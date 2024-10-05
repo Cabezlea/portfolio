@@ -16,7 +16,7 @@ const Home = () => {
             <h1>{produceSpans("LEANDRO CABEZAS")}</h1>
             <p className="subtitle">Software Developer</p>
             <p className="description">
-                I love crafting captivating experiences for the digital world to savor.
+                Digital nomad crafting immersive experiences that blend artistry with utility—transforming everyday interactions into imaginative adventures
             </p>
             <ThreeDScene />
         </div>
