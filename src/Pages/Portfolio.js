@@ -1,22 +1,25 @@
 import React from 'react';
 import './Portfolio.css';
+import VinumImage from '../Images/Vinum.png'; // Adjust the path as necessary
+import MercadonaImage from '../Images/Mercadona.png'; // Adjust the path as necessary
+import MusicPlayerImage from '../Images/MusicPlayer.png'; // Adjust the path as necessary
 
 const Portfolio = () => {
     const projects = [
         {
             name: "Vinum - AI-Powered Wine Recommendation",
             description: "Engineered and co-founded Vinum, a personalized wine discovery mobile app with React Native, Xcode, and Grok AI's API for enhanced wine suggestions.",
-            image: '/Images/Vinum.png'
+            image: VinumImage
         },
         {
             name: "Mercadona - Financial Data Processing",
             description: "Developed a Python-based system for financial transaction categorization using advanced regex algorithms, enhancing budget management capabilities.",
-            image: '/Images/Mercadona.png'
+            image: MercadonaImage
         },
         {
             name: "Music Player - Full Stack App Development",
             description: "Crafted a cross-platform music player in C++ with QT, focusing on low-latency audio data handling and efficient system architecture.",
-            image: '/Images/MusicPlayer.png'
+            image: MusicPlayerImage
         }
     ];
 

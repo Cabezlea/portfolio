@@ -32,9 +32,11 @@
 }
 
 .project-image {
-    max-width: 100%; /* Ensures image is responsive */
-    height: auto;
+    width: 100%; /* Constrain image width to be consistent */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the frame without distorting its aspect ratio */
     margin-bottom: 10px;
+    border-radius: 5px; /* Optional: rounds the corners of the images */
 }
 
 .project-name {
@@ -45,4 +47,5 @@
 .project-description {
     font-size: 1.1rem;
     color: #FFF;
+    margin-top: 10px; /* Gives some space between the name and description */
 }
