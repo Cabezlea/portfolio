@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 import GitHubIcon from '../Images/Github.svg';
 import MailIcon from '../Images/Mail.svg';
@@ -20,7 +21,14 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
+        emailjs.sendForm('service_2tqojrk', 'template_e49mswr', event.target, '8K0WcWO2498S0pIYA')
+            .then((result) => {
+                console.log(result.text);
+                alert('Message sent successfully!');
+            }, (error) => {
+                console.log(error.text);
+                alert('Failed to send the message, please try again.');
+            });
     };
 
     return (
