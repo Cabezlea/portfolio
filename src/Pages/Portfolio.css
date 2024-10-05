@@ -1,0 +1,48 @@
+.portfolio-container {
+    color: #FFF;
+    background-color: #0C2340; /* Dark blue background */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #222; /* Darker card backgrounds */
+    width: 30%; /* Each card takes up 30% of the container width */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.project-image {
+    max-width: 100%; /* Ensures image is responsive */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #FFF;
+}
