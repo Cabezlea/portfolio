@@ -1,14 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from './Pages/Home';
 import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
-import ThreeDScene from "./Components/ThreeDScene";
+import emailjs from "emailjs-com";
+
 
 const App = () => {
     const wrapperRef = useRef(null);
+    useEffect(() => {
+        emailjs.init("8K0WcWO2498S0pIYA");
+    }, []);
 
     return (
         <Router>

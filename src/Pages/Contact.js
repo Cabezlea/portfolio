@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import GitHubIcon from '../Images/Github.svg';
 import MailIcon from '../Images/Mail.svg';
 
 const Contact = () => {
+    const form = useRef();
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
+        from_name: '', // Changed from 'name'
+        from_email: '', // Changed from 'email'
         message: ''
     });
 
@@ -21,28 +22,70 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        emailjs.sendForm('service_2tqojrk', 'template_e49mswr', event.target, '8K0WcWO2498S0pIYA')
+
+        // Check if all fields are filled
+        if (!formData.from_name || !formData.from_email || !formData.message) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        emailjs.sendForm(
+            'service_2tqojrk',
+            'template_e49mswr',
+            form.current,
+            '8K0WcWO2498S0pIYA'
+        )
             .then((result) => {
-                console.log(result.text);
+                console.log('SUCCESS!', result.text);
                 alert('Message sent successfully!');
+                // Clear form after successful send
+                setFormData({
+                    from_name: '',
+                    from_email: '',
+                    message: ''
+                });
             }, (error) => {
-                console.log(error.text);
-                alert('Failed to send the message, please try again.');
+                console.log('FAILED...', error.text);
+                alert('Failed to send message. Please try again.');
             });
     };
 
     return (
         <div className="contact-container">
             <h1 className="contact-header">Contact</h1>
-            <form onSubmit={handleSubmit} className="contact-form">
-                <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your full name" />
+            <form ref={form} onSubmit={handleSubmit} className="contact-form">
+                <label htmlFor="from_name">Full Name</label>
+                <input
+                    type="text"
+                    id="from_name"
+                    name="from_name" // Changed to match template variable
+                    value={formData.from_name}
+                    onChange={handleChange}
+                    placeholder="Enter your full name"
+                    required
+                />
 
-                <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email address" />
+                <label htmlFor="from_email">Email Address</label>
+                <input
+                    type="email"
+                    id="from_email"
+                    name="from_email" // Changed to match template variable
+                    value={formData.from_email}
+                    onChange={handleChange}
+                    placeholder="Enter your email address"
+                    required
+                />
 
                 <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="4" placeholder="Enter your message"></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="4"
+                    placeholder="Enter your message"
+                    required
+                />
 
                 <button type="submit">Send</button>
             </form>
