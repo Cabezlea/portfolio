@@ -5,7 +5,7 @@ import Portfolio from './Pages/Portfolio';
 import Experience from './Pages/Experience';
 import Contact from './Pages/Contact';
 import Navbar from './Navbar';
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 
 const App = () => {
