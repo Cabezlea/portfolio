@@ -1,17 +1,18 @@
 .portfolio-container {
     color: #FFF;
-    background-color: #0C2340; /* Dark blue background */
-    padding: 40px;
+    background-color: #0C2340;
+    padding: 2.5rem; /* Converted from 40px */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    box-sizing: border-box; /* Added to prevent horizontal scrolling */
 }
 
 .portfolio-title {
     font-size: 5rem;
     font-weight: bold;
-    margin-bottom: 35px;
+    margin-bottom: 2.2rem; /* Converted from 35px */
 }
 
 .projects-container {
@@ -19,33 +20,101 @@
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
+    gap: 1.25rem; /* Added for consistent spacing */
 }
 
 .project-card {
-    background: #222; /* Darker card backgrounds */
-    width: 30%; /* Each card takes up 30% of the container width */
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #222;
+    width: calc(30% - 1.25rem); /* Adjusted for gap */
+    padding: 1.25rem; /* Converted from 20px */
+    border-radius: 0.625rem; /* Converted from 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2); /* Converted from 4px 8px */
     text-align: center;
+    transition: transform 0.3s ease; /* Added smooth hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-0.3125rem); /* Added subtle lift effect */
 }
 
 .project-image {
-    width: 100%; /* Constrain image width to be consistent */
-    height: 200px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensures the image covers the frame without distorting its aspect ratio */
-    margin-bottom: 10px;
-    border-radius: 5px; /* Optional: rounds the corners of the images */
+    width: 100%;
+    height: 12.5rem; /* Converted from 200px */
+    object-fit: cover;
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    border-radius: 0.3125rem; /* Converted from 5px */
 }
 
 .project-name {
     font-size: 1.5rem;
     color: #FFF;
+    margin-bottom: 0.625rem; /* Added spacing */
 }
 
 .project-description {
     font-size: 1.4rem;
     color: #FFF;
-    margin-top: 10px; /* Gives some space between the name and description */
+    margin-top: 0.625rem; /* Converted from 10px */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 50rem) {
+    .portfolio-container {
+        padding: 1.5rem; /* Reduced padding */
+    }
+
+    .portfolio-title {
+        font-size: 3rem; /* Smaller font size */
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project-card {
+        width: 90%; /* Wider cards on mobile */
+        margin: 0; /* Remove margin since we're using gap */
+    }
+
+    .project-image {
+        height: 15rem; /* Slightly taller images on mobile */
+    }
+
+    .project-name {
+        font-size: 1.25rem;
+    }
+
+    .project-description {
+        font-size: 1.125rem;
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 30rem) {
+    .portfolio-container {
+        padding: 1rem;
+    }
+
+    .portfolio-title {
+        font-size: 2.5rem;
+    }
+
+    .project-card {
+        width: 95%;
+    }
+
+    .project-image {
+        height: 12rem;
+    }
+
+    .project-name {
+        font-size: 1.125rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
 }
