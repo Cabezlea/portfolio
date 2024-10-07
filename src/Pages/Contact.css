@@ -4,58 +4,58 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #0C2340;
-    padding: 2.5rem;
+    padding: 2.5rem; /* Converted to REM if needed */
     box-sizing: border-box;
     position: relative;
 }
 
 .contact-header {
-    font-size: 5rem; /* Increase the font size */
+    font-size: 5rem; /* Consider converting to REM if needed */
     color: white;
-    margin-bottom: 5%; /* Add some space below the header */
-    font-weight: bold; /* Make it bold */
+    margin-bottom: 5%; /* Keep as percentage */
+    font-weight: bold;
     text-align: center;
 }
 
 .contact-form {
-    width: 90%;
-    max-width: 37.5rem;
+    width: 90%; /* Percentage based */
+    max-width: 37.5rem; /* Convert to REM if applicable */
     display: flex;
     flex-direction: column;
     background-color: #333;
-    padding: 1.25rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    font-size: 1.5rem;
-    z-index: 2; /* Higher z-index to ensure it stays on top */
+    padding: 1.25rem; /* REM for consistent scaling */
+    border-radius: 0.5rem; /* REM for consistent rounding */
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    font-size: 1.5rem; /* Adjust to REM for scalability */
+    z-index: 2;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 2px solid #222;
+    padding: 0.75rem; /* REM for consistent padding */
+    margin-bottom: 1rem; /* REM for consistent spacing */
+    border: 2px solid #222; /* Keep fixed pixel border */
     background-color: #222;
     color: white;
-    border-radius: 4px;
+    border-radius: 0.25rem; /* REM for consistent rounding */
     outline: none;
 }
 
 .contact-form textarea {
-    height: 9.4rem; /* Make the textarea bigger */
+    height: 9.4rem; /* Consider converting to REM */
 }
 
 .contact-form button {
-    padding: 12px;
+    padding: 0.75rem; /* REM for consistent padding */
     background-color: #0056b3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem; /* REM for consistent rounding */
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Consider REM for font sizing */
 }
 
 .contact-form button:hover {
@@ -64,24 +64,24 @@
 
 .contact-form label {
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem; /* REM for consistent spacing */
 }
 
 .github-link, .mail-link {
     position: absolute;
-    bottom: 1.25rem; /* Adjust the positioning as necessary */
+    bottom: 1.25rem; /* REM for better scaling */
 }
 
 .github-link {
-    left: 1.25rem; /* GitHub icon on the bottom left corner */
+    left: 1.25rem; /* REM for consistent positioning */
 }
 
 .mail-link {
-    right: 1.25rem; /* Mail icon on the bottom right corner */
+    right: 1.25rem; /* REM for consistent positioning */
 }
 
 .icon {
-    width: 9.3rem; /* Fixed width for consistency */
+    width: 9.3rem; /* Adjust to percentage for responsive design */
     height: auto;
     transition: opacity 0.3s ease;
 }
@@ -89,3 +89,40 @@
 .icon:hover {
     opacity: 0.8;
 }
+
+/* Media Queries for smaller screens */
+@media (max-width: 50rem) {
+    .contact-header {
+        font-size: 2.5rem;
+    }
+
+    .icon {
+        width: 4rem; /* Changed to rem for consistent sizing */
+    }
+
+    .github-link, .mail-link {
+        position: absolute; /* Keep position fixed */
+        bottom: 1rem;
+    }
+
+    .github-link {
+        left: 1rem;
+    }
+
+    .mail-link {
+        right: 1rem;
+    }
+
+    .contact-form {
+        width: 95%; /* Slightly wider on mobile */
+        padding: 1rem;
+    }
+}
+
+/* Add an even smaller breakpoint for very small screens */
+@media (max-width: 30rem) {
+    .icon {
+        width: 3rem; /* Even smaller icons for very small screens */
+    }
+}
+
