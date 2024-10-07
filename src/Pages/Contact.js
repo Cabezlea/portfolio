@@ -8,7 +8,7 @@ const Contact = () => {
     const form = useRef();
     const [formData, setFormData] = useState({
         from_name: '', // Changed from 'name'
-        from_email: '', // Changed from 'email'
+        email_id: '', // Changed from 'email'
         message: ''
     });
 
@@ -24,7 +24,7 @@ const Contact = () => {
         event.preventDefault();
 
         // Check if all fields are filled
-        if (!formData.from_name || !formData.from_email || !formData.message) {
+        if (!formData.from_name || !formData.email_id || !formData.message) {
             alert('Please fill in all fields');
             return;
         }
@@ -33,7 +33,7 @@ const Contact = () => {
             'service_2tqojrk',
             'template_e49mswr',
             form.current,
-            '8K0WcWO2498S0pIYA'
+            '8K0WcWO2498SOpIYA'
         )
             .then((result) => {
                 console.log('SUCCESS!', result.text);
@@ -41,7 +41,7 @@ const Contact = () => {
                 // Clear form after successful send
                 setFormData({
                     from_name: '',
-                    from_email: '',
+                    email_id: '',
                     message: ''
                 });
             }, (error) => {
@@ -65,11 +65,11 @@ const Contact = () => {
                     required
                 />
 
-                <label htmlFor="from_email">Email Address</label>
+                <label htmlFor="email_id">Email Address</label>
                 <input
                     type="email"
-                    id="from_email"
-                    name="from_email" // Changed to match template variable
+                    id="email_id"
+                    name="email_id" // Changed to match template variable
                     value={formData.from_email}
                     onChange={handleChange}
                     placeholder="Enter your email address"
