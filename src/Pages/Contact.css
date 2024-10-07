@@ -92,17 +92,24 @@
 
 /* Media Queries for smaller screens */
 @media (max-width: 50rem) {
+    .contact-container {
+        padding-top: 1rem; /* Reduce top padding */
+        justify-content: flex-start; /* Align content to top instead of center */
+    }
+
     .contact-header {
-        font-size: 2.5rem;
+        font-size: 5rem;
+        margin-top: 3.5rem; /* Add space at the top */
+        margin-bottom: 2rem; /* Reduce bottom margin to bring form closer to header */
     }
 
     .icon {
-        width: 4rem; /* Changed to rem for consistent sizing */
+        width: 5rem;
     }
 
     .github-link, .mail-link {
-        position: absolute; /* Keep position fixed */
-        bottom: 1rem;
+        position: absolute;
+        bottom: 2rem;
     }
 
     .github-link {
@@ -114,8 +121,9 @@
     }
 
     .contact-form {
-        width: 95%; /* Slightly wider on mobile */
+        width: 95%;
         padding: 1rem;
+        margin-bottom: 5rem; /* Add space at bottom to prevent overlap with icons */
     }
 }
 
