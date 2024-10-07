@@ -5,6 +5,7 @@
     min-height: 100vh; /* Ensure it takes full height */
     background-image: url('../Images/GargantuaCopy.jpeg'); /* Ensure correct path */
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -20,27 +21,27 @@
     color: white;
     text-align: left;
     z-index: 1;
+    padding: 1rem;
 }
 
-/* Font sizes for responsive design */
 .hero-content h1 {
-    font-size: 4vw; /* Responsive font size */
-    margin-bottom: 1rem; /* Adjusted spacing */
+    font-size: 4rem; /* Changed from vw to rem for better control */
+    margin-bottom: 1rem;
     font-weight: bold;
     animation: text-glow 1.5s infinite alternate;
 }
 
 .hero-content .subtitle {
-    font-size: 2vw;
+    font-size: 2rem; /* Changed from vw to rem */
     margin-bottom: 0.5rem;
 }
 
 .hero-content .description {
-    font-size: 1.5vw;
+    font-size: 1.5rem; /* Changed from vw to rem */
     margin-top: 1rem;
-    max-width: 600px;
+    max-width: 37.5rem; /* Converted 600px to rem */
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .astronaut-canvas {
@@ -48,17 +49,60 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%; /* Takes full width of its parent */
-    height: 100%; /* Takes full height of its parent */
+    width: 100%;
+    height: 100%;
     z-index: 1;
 }
 
-/* Animation for glowing effect */
 @keyframes text-glow {
     from {
-        text-shadow: 0 0 10px white;
+        text-shadow: 0 0 0.625rem white;
     }
     to {
-        text-shadow: 0 0 20px orange;
+        text-shadow: 0 0 1.25rem orange;
+    }
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 50rem) {
+    .hero-content {
+        top: 15%; /* Adjusted for better vertical positioning on mobile */
+        left: 2.5%;
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-content .description {
+        font-size: 1.125rem;
+        max-width: 100%; /* Allow full width on mobile */
+        margin-top: 0.75rem;
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 30rem) {
+    .hero-content {
+        top: 10%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-content .description {
+        font-size: 1rem;
     }
 }
