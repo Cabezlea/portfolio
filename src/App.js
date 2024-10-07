@@ -11,7 +11,7 @@ import emailjs from "emailjs-com";
 const App = () => {
     const wrapperRef = useRef(null);
     useEffect(() => {
-        emailjs.init("8K0WcWO2498S0pIYA");
+        emailjs.init("8K0WcWO2498SOpIYA");
     }, []);
 
     return (
