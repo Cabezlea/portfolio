@@ -26,9 +26,9 @@ Here is a glimpse of the Portfolio section:
 - **Experience.js**: Outlines my professional experiences.
 - **Contact.js**: Contains the contact form for direct communications.
 
-## Internship Opportunities
+## Internship or Full Time Opportunities
 
-Companies interested in discussing potential internships or collaborations can reach out through the contact form provided on the website. My portfolio demonstrates a proactive approach to learning and applying new technologies in real-world scenarios.
+Companies interested in discussing potential internships, full time positions, or collaborations can reach out through the contact form provided on the website. My portfolio demonstrates a proactive approach to learning and applying new technologies in real-world scenarios.
 
 ## License
 
